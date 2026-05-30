@@ -8,6 +8,9 @@
 
 /* Begin PBXFileReference section */
 		06B5B2462FCB94C900C63169 /* LibraryCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06B5B31B2FCBB20300C63169 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		06B5B31C2FCBB22200C63169 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		06B5B31F2FCBB48200C63169 /* oldbigbookshelf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = oldbigbookshelf.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				06B5B2482FCB94C900C63169 /* LibraryCollection */,
+				06B5B31A2FCBB20300C63169 /* Frameworks */,
 				06B5B2472FCB94C900C63169 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +60,16 @@
 				06B5B2462FCB94C900C63169 /* LibraryCollection.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		06B5B31A2FCBB20300C63169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06B5B31F2FCBB48200C63169 /* oldbigbookshelf.jpg */,
+				06B5B31C2FCBB22200C63169 /* libsqlite3.tbd */,
+				06B5B31B2FCBB20300C63169 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +170,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = oldbigbookshelf.jpg;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -164,7 +178,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riverthree.LibraryCollection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riverthree.LibraryCollectionv4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -194,7 +208,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = oldbigbookshelf.jpg;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -202,7 +216,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.riverthree.LibraryCollection;
+				PRODUCT_BUNDLE_IDENTIFIER = com.riverthree.LibraryCollectionv4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
