@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Author" representedClassName="Author" syncable="YES">
+        <attribute name="authorFirstName" optional="YES" attributeType="String"/>
+        <attribute name="authorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="authorLastName" attributeType="String" defaultValueString=""/>
+        <attribute name="authorMiddleName" optional="YES" attributeType="String"/>
+        <relationship name="toTitleAuthor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleAuthor" inverseName="toAuthor" inverseEntity="TitleAuthor"/>
+    </entity>
+    <entity name="Narrator" representedClassName="Narrator" syncable="YES">
+        <attribute name="narratorFirstName" optional="YES" attributeType="String"/>
+        <attribute name="narratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="narratorLastName" attributeType="String" defaultValueString=""/>
+        <attribute name="narratorMiddleName" optional="YES" attributeType="String"/>
+        <relationship name="toTitleNarrator" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleNarrator" inverseName="toNarrator" inverseEntity="TitleNarrator"/>
+    </entity>
+    <entity name="Title" representedClassName="Title" syncable="YES">
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="toDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TitleDetails" inverseName="toTitle" inverseEntity="TitleDetails"/>
+        <relationship name="toTitleAuthor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleAuthor" inverseName="toTitle" inverseEntity="TitleAuthor"/>
+        <relationship name="toTitleNarrator" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleNarrator" inverseName="toTitle" inverseEntity="TitleNarrator"/>
+    </entity>
+    <entity name="TitleAuthor" representedClassName="TitleAuthor" syncable="YES">
+        <attribute name="authorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="titleAuthorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="toAuthor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="toTitleAuthor" inverseEntity="Author"/>
+        <relationship name="toTitle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Title" inverseName="toTitleAuthor" inverseEntity="Title"/>
+    </entity>
+    <entity name="TitleDetails" representedClassName="TitleDetails" syncable="YES">
+        <attribute name="bookType" optional="YES" attributeType="String"/>
+        <attribute name="editionNumber" optional="YES" attributeType="String"/>
+        <attribute name="genre" optional="YES" attributeType="String"/>
+        <attribute name="isbn" optional="YES" attributeType="String"/>
+        <attribute name="publishingDate" optional="YES" attributeType="String"/>
+        <attribute name="publishingHouse" optional="YES" attributeType="String"/>
+        <attribute name="titleDetailsId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="toTitle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Title" inverseName="toDetails" inverseEntity="Title"/>
+    </entity>
+    <entity name="TitleNarrator" representedClassName="TitleNarrator" syncable="YES">
+        <attribute name="narratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="titleNarratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="toNarrator" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Narrator" inverseName="toTitleNarrator" inverseEntity="Narrator"/>
+        <relationship name="toTitle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Title" inverseName="toTitleNarrator" inverseEntity="Title"/>
+    </entity>
+</model>
