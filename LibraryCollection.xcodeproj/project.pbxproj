@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06B5B3852FCBB6B400C63169 /* oldbigbookshelf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 06B5B31F2FCBB48200C63169 /* oldbigbookshelf.jpg */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		06B5B2462FCB94C900C63169 /* LibraryCollection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryCollection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B5B31B2FCBB20300C63169 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -104,6 +108,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
@@ -136,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B5B3852FCBB6B400C63169 /* oldbigbookshelf.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
