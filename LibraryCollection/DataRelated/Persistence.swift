@@ -18,8 +18,9 @@ class PersistenceController {
         // Create a store description for a CloudKit-backed local store
         let cloudStoreLocation = URL(fileURLWithPath: "Bundle.main.applicationSupportDirectory")
         let cloudStoreDescription = NSPersistentStoreDescription(url: cloudStoreLocation)
+        
         cloudStoreDescription.configuration = "Default"
-        cloudStoreDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.RiverThree.LibraryCollection")
+        cloudStoreDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.RiverThree.LC")
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {

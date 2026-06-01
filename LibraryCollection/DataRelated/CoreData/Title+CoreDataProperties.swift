@@ -21,6 +21,7 @@ extension Title {
     @NSManaged public var toTitleAuthor: NSSet?
     @NSManaged public var toTitleNarrator: NSSet?
     @NSManaged public var toDetails: TitleDetails?
+    @NSManaged public var timestamp: Date
 
 }
 

@@ -21,6 +21,7 @@ extension Narrator {
     @NSManaged public var narratorFirstName: String?
     @NSManaged public var narratorMiddleName: String?
     @NSManaged public var toTitleNarrator: NSSet?
+    @NSManaged public var timestamp: Date
     
     public var wrappedNarratorFirstName: String {
         narratorFirstName ?? ""

@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Author {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Author> {
@@ -21,6 +20,7 @@ extension Author {
     @NSManaged public var authorFirstName: String?
     @NSManaged public var authorMiddleName: String?
     @NSManaged public var toTitleAuthor: NSSet?
+    @NSManaged public var timestamp: Date
     
     public var wrappedAuthorFirstName: String {
         authorFirstName ?? ""

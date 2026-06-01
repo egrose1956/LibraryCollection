@@ -21,6 +21,7 @@ extension TitleAuthor {
     @NSManaged public var authorId: UUID
     @NSManaged public var toAuthor: NSSet?
     @NSManaged public var toTitle: NSSet?
+    @NSManaged public var timestamp: Date
 
 }
 
