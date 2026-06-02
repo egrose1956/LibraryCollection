@@ -5,8 +5,6 @@
 //  Created by Elizabeth Rose on 4/6/23.
 //
 //
-
-import Foundation
 import CoreData
 
 extension Author {
@@ -20,7 +18,7 @@ extension Author {
     @NSManaged public var authorFirstName: String?
     @NSManaged public var authorMiddleName: String?
     @NSManaged public var toTitleAuthor: NSSet?
-    @NSManaged public var timestamp: Date
+    @NSManaged public var timestamp: Date?
     
     public var wrappedAuthorFirstName: String {
         authorFirstName ?? ""

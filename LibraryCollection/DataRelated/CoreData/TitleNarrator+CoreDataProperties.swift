@@ -6,9 +6,7 @@
 //
 //
 
-import Foundation
 import CoreData
-
 
 extension TitleNarrator {
 
@@ -21,7 +19,7 @@ extension TitleNarrator {
     @NSManaged public var narratorId: UUID
     @NSManaged public var toTitle: NSSet?
     @NSManaged public var toNarrator: NSSet?
-    @NSManaged public var timestamp: Date
+    @NSManaged public var timestamp: Date?
 
 }
 

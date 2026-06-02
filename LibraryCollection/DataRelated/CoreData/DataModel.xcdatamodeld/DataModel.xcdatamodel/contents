@@ -5,6 +5,7 @@
         <attribute name="authorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="authorLastName" attributeType="String" defaultValueString=""/>
         <attribute name="authorMiddleName" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="toTitleAuthor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleAuthor" inverseName="toAuthor" inverseEntity="TitleAuthor"/>
     </entity>
     <entity name="Narrator" representedClassName="Narrator" syncable="YES">
@@ -12,9 +13,11 @@
         <attribute name="narratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="narratorLastName" attributeType="String" defaultValueString=""/>
         <attribute name="narratorMiddleName" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="toTitleNarrator" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TitleNarrator" inverseName="toNarrator" inverseEntity="TitleNarrator"/>
     </entity>
     <entity name="Title" representedClassName="Title" syncable="YES">
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String" defaultValueString=""/>
         <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="toDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TitleDetails" inverseName="toTitle" inverseEntity="TitleDetails"/>
@@ -23,6 +26,7 @@
     </entity>
     <entity name="TitleAuthor" representedClassName="TitleAuthor" syncable="YES">
         <attribute name="authorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="titleAuthorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="toAuthor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Author" inverseName="toTitleAuthor" inverseEntity="Author"/>
@@ -35,12 +39,14 @@
         <attribute name="isbn" optional="YES" attributeType="String"/>
         <attribute name="publishingDate" optional="YES" attributeType="String"/>
         <attribute name="publishingHouse" optional="YES" attributeType="String"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="titleDetailsId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="toTitle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Title" inverseName="toDetails" inverseEntity="Title"/>
     </entity>
     <entity name="TitleNarrator" representedClassName="TitleNarrator" syncable="YES">
         <attribute name="narratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="titleId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="titleNarratorId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="toNarrator" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Narrator" inverseName="toTitleNarrator" inverseEntity="Narrator"/>

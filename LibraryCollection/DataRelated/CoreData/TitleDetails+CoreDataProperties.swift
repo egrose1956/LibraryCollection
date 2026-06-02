@@ -6,9 +6,7 @@
 //
 //
 
-import Foundation
 import CoreData
-
 
 extension TitleDetails {
 
@@ -25,7 +23,7 @@ extension TitleDetails {
     @NSManaged public var publishingDate: String?
     @NSManaged public var publishingHouse: String?
     @NSManaged public var toTitle: Title?
-    @NSManaged public var timestamp: Date
+    @NSManaged public var timestamp: Date?
     
     public var wrappedEditionNumber: String {
         editionNumber ?? ""
