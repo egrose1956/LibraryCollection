@@ -1,31 +1,16 @@
-/*
-See the LICENSE.txt file for this sample’s licensing information.
-
-Abstract:
-A class that sets up the Core Data stack.
-*/
-import Foundation
 import CoreData
+import Foundation
 
-class PersistenceController {
+struct PersistenceController {
     
     static let shared = PersistenceController()
-    
-    lazy var persistentContainer: NSPersistentCloudKitContainer = {
-                        
-        let container = NSPersistentCloudKitContainer(name: "DataModel", managedObjectModel: self.persistentContainer.managedObjectModel)
+    let persistentContainer: NSPersistentCloudKitContainer = {
         
-        // Main context for UI operations (runs on main thread)
-        var viewContext: NSManagedObjectContext {
-            container.viewContext
-        }
-        viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
-        viewContext.undoManager = nil
-
+        let container = NSPersistentCloudKitContainer(name: "DataModel")
+        
         // Create a store description for a CloudKit-backed local store
         let cloudStoreLocation = URL(fileURLWithPath: "Bundle.main.applicationSupportDirectory")
         let cloudStoreDescription = NSPersistentStoreDescription(url: cloudStoreLocation)
-        
         cloudStoreDescription.configuration = "Default"
         cloudStoreDescription.cloudKitContainerOptions = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.RiverThree.LC")
         
@@ -34,11 +19,14 @@ class PersistenceController {
                 fatalError("Core Data failed to load: \(error.localizedDescription)")
             }
         })
-
+        
+        container.viewContext.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+        container.viewContext.undoManager = nil
+        
 #if DEBUG
         print(container.persistentStoreDescriptions[0].url?.absoluteURL.path.removingPercentEncoding as Any)
 #endif
-
+        
         return container
         
     }()

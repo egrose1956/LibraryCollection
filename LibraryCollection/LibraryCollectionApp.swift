@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
-import SwiftData
+import CoreData
 
 @main
 struct LibraryCollectionApp: App {
     
+    let persistenceController = PersistenceController.shared
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView(filter: .authors)
+                .environment(\.managedObjectContext,
+                              persistenceController.persistentContainer.viewContext)
+        }
+    }
+/*
     var sharedModelContainer: ModelContainer = {
         
         let schema = Schema([
@@ -44,5 +54,6 @@ struct LibraryCollectionApp: App {
         }
         .modelContainer(sharedModelContainer)
     }
+ */
     
 }

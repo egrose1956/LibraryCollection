@@ -41,7 +41,7 @@ struct ContentView: View {
                     AuthorsListView()
                 }
                 Section {
-                    Image("oldbigbookshelf")
+                    Image("oldbigbookshelf-cropped")
                         .resizable()
                         .scaledToFit()
                         .accessibilityLabel("Picture of a colorful fantasy bookshelf.")
